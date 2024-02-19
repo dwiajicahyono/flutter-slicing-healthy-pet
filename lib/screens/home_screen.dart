@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors_in_immutables
+
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -54,7 +56,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   BottomNavigationBar _bottomNavigationBar() => BottomNavigationBar(
-        selectedItemColor: Color(0xff818AF9),
+        selectedItemColor: const Color(0xff818AF9),
         type: BottomNavigationBarType.fixed,
         items: menus
             .map((e) =>
@@ -62,7 +64,7 @@ class HomeScreen extends StatelessWidget {
             .toList(),
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        unselectedItemColor: Color(0xffBFBFBF),
+        unselectedItemColor: const Color(0xffBFBFBF),
       );
 
   ListView _doctors() {
@@ -147,15 +149,15 @@ class HomeScreen extends StatelessWidget {
                 Text(
                   'Available For',
                   style: GoogleFonts.manrope(
-                      color: Color(0xff50CC98),
+                      color: const Color(0xff50CC98),
                       fontWeight: FontWeight.bold,
                       fontSize: 12),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 90,
                 ),
                 SvgPicture.asset('assets/svgs/cat.svg'),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 SvgPicture.asset('assets/svgs/dog.svg'),
@@ -193,7 +195,7 @@ class HomeScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: selectedService == index // Perubahan di sini
                           ? Colors.white // Ganti warna ini
-                          : const Color(0x3F3E3F).withOpacity(0.3),
+                          : const Color(0xff3F3E3F).withOpacity(0.3),
                     ),
                   )),
                 ),
@@ -215,7 +217,7 @@ class HomeScreen extends StatelessWidget {
           border: InputBorder.none,
           prefixIcon: const Icon(
             FeatherIcons.search,
-            color: const Color(0xffADACAD),
+            color: Color(0xffADACAD),
           ),
           hintText: "Find best vaccinate, treatment...",
           hintStyle: GoogleFonts.manrope(
